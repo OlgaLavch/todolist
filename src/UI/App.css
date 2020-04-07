@@ -1,0 +1,50 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.todoList {
+  border: 5px rgba(166, 146, 238, 0.712) solid;
+  border-radius: 3px;
+  width: 300px;
+  margin: 10px;
+}
+.todoList > div {
+  padding: 10px;
+}
+.filter-active {
+  background-color: rgba(0, 0, 255, 0.342);
+  color: aliceblue;
+}
+.error {
+  border: 1px solid red;
+}
+.hideButtons:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+.todoList_header_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+}
+.todoList_header_title h3 {
+color: rgba(0, 0, 0, 0.678);
+font-weight: 400;
+font-size: xx-large;
+margin: 5px auto;
+overflow: hidden;
+}
+.todoList_header_title button {
+  position: relative;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.74);
+  color: aliceblue;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.todoList_header_title button:hover {
+  background-color: aliceblue;
+  color: rgba(0, 0, 0, 0.753)
+}

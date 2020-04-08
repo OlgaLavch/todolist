@@ -3,6 +3,8 @@ import './App.css';
 
 const TodoListTitle = ({ title, deleteTodolist, todoListId }) => {
     const deleteTodoList = () => {
+        localStorage.removeItem('hooksTodolistTasks' + todoListId);
+        localStorage.removeItem('hooksTodolist')
         deleteTodolist(todoListId)
     }
     return (

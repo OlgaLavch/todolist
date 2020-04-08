@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './TodolistTask.module.css';
+import  './TodolistTask.css';
 
 const TodoListTask = ({ task, changeStatus, todoListId, changeTitle, deleteTask }) => {
     const [activeMode, setActiveMode] = useState(false)
@@ -16,13 +16,13 @@ const TodoListTask = ({ task, changeStatus, todoListId, changeTitle, deleteTask 
         deleteTask(todoListId, task.id)
     }
     const classForIsDone = task.isDone ? 'todoListTaskDone' : 'todoListTask'
+    console.log(classForIsDone)
     return (
-        <div className={styles.todoListTasks}>
             <div className={classForIsDone}>
                 <input type="checkbox" onChange={onIsDoneChange} checked={task.isDone} />
                 <span>{task.id + ' - '}</span>
                 {!activeMode &&
-                    <span className={styles.tasksDeleteButton}>
+                    <span className={'tasksDeleteButton'}>
                         <span onDoubleClick={() => setActiveMode(true)}>{task.title}</span>
 
                     </span>
@@ -35,7 +35,6 @@ const TodoListTask = ({ task, changeStatus, todoListId, changeTitle, deleteTask 
                 }
                 <button onClick={deleteTAsk}>X</button>
             </div>
-        </div>
     );
 }
 

@@ -4,7 +4,8 @@
   flex-wrap: wrap;
 }
 .todoList {
-  border: 5px rgba(166, 146, 238, 0.712) solid;
+  border: 1px solid #4a4a4a;
+  background-color: #252527;
   border-radius: 3px;
   width: 300px;
   margin: 10px;
@@ -16,9 +17,6 @@
   background-color: rgba(0, 0, 255, 0.342);
   color: aliceblue;
 }
-.error {
-  border: 1px solid red;
-}
 .hideButtons:hover {
   cursor: pointer;
   border: 1px solid black;
@@ -27,24 +25,76 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
 }
 .todoList_header_title h3 {
-color: rgba(0, 0, 0, 0.678);
-font-weight: 400;
-font-size: xx-large;
-margin: 5px auto;
+  color: #f0f8ff;
+-webkit-transition: all 2s;
+transition: all 2s;
+font-weight: 700;
+text-transform: capitalize;
+letter-spacing: 3px;
+font-weight: 300;
+font-stretch: normal;
+line-height: 1.2;
+font-size: 36px;
+font-family: Josefin Sans,sans-serif;
+margin: 20px auto;
 overflow: hidden;
 }
 .todoList_header_title button {
   position: relative;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.74);
+  background-color: rgba(255, 0, 0, 0);
   color: aliceblue;
   text-decoration: none;
+  font-family: Josefin Sans,sans-serif;
   transition: 0.3s ease-in-out;
+}@media screen and (max-width: 500px) {
+  .todoList_header_title button {
+    background-color: rgb(212, 74, 132);
+  }
 }
 .todoList_header_title button:hover {
-  background-color: aliceblue;
-  color: rgba(0, 0, 0, 0.753)
+  background-color: rgb(212, 74, 132);
+  color: rgba(0, 0, 0, 0.637)
+}
+.todoList-newTaskForm input {
+  margin: 10px;
+  padding: 7px;
+  font-size: 17px;
+  border: 1px solid #4a4a4a;
+  border-radius: 0;
+  background-color: #252527;
+  color: #f0f8ff;
+  resize: none;
+}
+.todoList-newTaskForm button {
+  color: rgba(255, 255, 255, 0.699);
+-webkit-transition: all .5s;
+transition: all .5s;
+position: relative;
+height: 40px;
+text-align: center;
+width: 50px;
+cursor: pointer;
+background-color: #1f1f20;
+font-family: Josefin Sans,sans-serif;
+}
+.todoList-newTaskForm button:hover {
+  transform: scale(1.2);
+}
+.todoList-footer button {
+  color: rgba(255, 255, 255, 0.699);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  position: relative;
+  height: 40px;
+  text-align: center;
+  width: 33%;
+  cursor: pointer;
+  background-color: #1f1f20;
+  font-family: Josefin Sans,sans-serif;
+}
+.todoList-footer button:focus {
+  background-color: #4a4a5f;
 }

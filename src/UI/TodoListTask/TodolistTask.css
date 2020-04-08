@@ -1,17 +1,22 @@
 
 .todoListTask{
   position: relative;
+  margin: 10px;
 }
 .todoListTask button {
   position: absolute;
   right: 0px;
-  background-color: rgba(0, 0, 0, 0.74);
+  background-color: rgba(0, 0, 0, 0);
   color: aliceblue;
   text-decoration: none;
   transition: 0.3s ease-in-out;
+}@media screen and (max-width: 500px) {
+  .todoListTask button {
+    background-color: rgb(212, 74, 132);
+  }
 }
 .todoListTask button:hover {
-  background-color: aliceblue;
+  background-color: rgb(212, 74, 132);
   color: rgba(0, 0, 0, 0.753)
 }
 .todoListTaskDone{

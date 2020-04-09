@@ -20,7 +20,7 @@ const TodoListTask = ({ task, changeStatus, todoListId, changeTitle, deleteTask 
     return (
             <div className={classForIsDone}>
                 <input type="checkbox" onChange={onIsDoneChange} checked={task.isDone} />
-                <span>{task.id + ' - '}</span>
+                {/* <span>{task.id + ' - '}</span> */}
                 {!activeMode &&
                     <span className={'tasksDeleteButton'}>
                         <span onDoubleClick={() => setActiveMode(true)}>{task.title}</span>

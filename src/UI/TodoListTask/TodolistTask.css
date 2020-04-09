@@ -20,6 +20,18 @@
   color: rgba(0, 0, 0, 0.753)
 }
 .todoListTaskDone{
+  margin: 10px;
+  position: relative;
   transition: 0.3s ease-in-out;
   opacity: 0.5;
+}
+.todoListTaskDone button {
+  position: absolute;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  color: aliceblue;
+  text-decoration: none;
+}
+.todoListTaskDone span {
+  text-decoration: line-through;
 }
